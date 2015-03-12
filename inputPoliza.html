@@ -1,0 +1,791 @@
+<html>
+
+<head>
+<script src="js/angular.min.js"></script>
+<script src="js/controllerPost.js"></script>
+<meta charset="utf-8">
+
+<style type="text/css">
+.style1 {
+	margin-top: 0px;
+}
+.style2 {
+	margin-left: 0px;
+}
+.style3 {
+	text-align: center;
+}
+.style4 {
+	font-size: medium;
+}
+.style5 {
+	font-size: large;
+	text-decoration: underline;
+}
+.style6 {
+	font-size: large;
+	text-decoration: underline;
+	border-left-style: none;
+	border-left-width: medium;
+	border-top-style: none;
+	border-top-width: medium;
+	border-bottom-style: none;
+	border-bottom-width: medium;
+}
+.style7 {
+	border-width: 0px;
+}
+.style8 {
+	font-size: large;
+	text-decoration: underline;
+	border-right-style: none;
+	border-right-width: medium;
+	border-top-style: none;
+	border-top-width: medium;
+	border-bottom-style: none;
+	border-bottom-width: medium;
+}
+.style9 {
+	border-left-style: none;
+	border-left-width: medium;
+}
+.style13 {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+.style14 {
+	font-size: large;
+}
+</style>
+</head>
+
+<title>Agregar</title>
+
+<body>
+
+<form id="myForm"  method="post" action="http://127.0.0.1:55556/?action=postData" >
+<div class="style3" ng-controller="Controller" ng-app>
+	<strong><span class="style14">Registro de aspirantes Web<br>
+	Sedes Regionales</span></strong><br>
+</div>
+
+<table style="width: 987px" class="style7">
+<tr>
+	<td class="style6" style="width: 125px">
+		<strong>WB: </strong>
+	</td>
+	<td class="style8" style="width: 205px">
+		<strong>
+		<input id="id" name='data2.spriden_id' style="width: 210px" ></strong></td>
+	<td colspan="2" class="style9">
+		<strong></strong></td>
+	<td style="width: 324px">
+		<strong></strong></td>
+</tr>
+
+
+<tr>
+	<td colspan="2" style="height: 23px"></td>
+	<td colspan="2" class="style1" style="height: 23px">&nbsp;</td>
+	<td style="width: 324px; height: 23px;" class="style1">&nbsp;</td>
+</tr>
+
+
+<tr>
+	<td colspan="2"><strong>Apellidos</strong></td>
+	<td colspan="2"><strong>Primer Nombre</strong></td>
+	<td><strong>Segundo Nombre</strong></td>
+</tr>
+
+
+<tr>
+	<td colspan="2">
+	<strong>
+	<input id="lastname" name='data2.SPRIDEN_LAST_NAME' style="width: 333px"></strong></td>
+	<td colspan="2"><strong>
+	<input id="name1" name="data2.SPRIDEN_FIRST_NAME" style="width: 310px"></strong></td>
+	<td style="width: 324px" class="style13">
+	<strong>
+	<input id="name2" name='data2.SPRIDEN_MI' style="width: 309px"></strong></td>
+</tr>
+
+
+<tr>
+	<td colspan="2"><hr></td>
+	<td colspan="2"><hr></td>
+	<td style="width: 324px"><hr></td>
+</tr>
+
+
+<tr>
+	<td colspan="2" class="style5"><strong>Domicilio Permanente</strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+
+<tr>
+	<td colspan="2"><strong>Calle</strong></td>
+	<td colspan="2"><strong>Número</strong></td>
+	<td style="width: 324px"><strong>Colonia</strong></td>
+</tr>
+
+
+<tr>
+	<td colspan="2"><strong><input id="pr_calle1" name='data2.PR_SPRADDR_STREET_LINE1' style="width: 330px"></strong></td>
+	<td colspan="2"><strong><input id="pr_calle2" name='data2.PR_SPRADDR_STREET_LINE2' style="width: 197px"></strong></td>
+	<td style="width: 324px"><strong><input id="pr_calle3" name='data2.PR_SPRADDR_STREET_LINE3' style="width: 206px"></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong>Código Postal</strong></td>
+	<td colspan="2"><strong>Municipio</strong></td>
+	<td style="width: 324px"><strong>Ciudad</strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong><input id="pr_cp" name='data2.PR_SPRADDR_ZIP'></strong></td>
+	<td colspan="2">
+		<strong>
+			<input list="Municipios" Id="pr_county" name='data2.PR_STVCNTY_DESC' style="width: 194px" />
+			<datalist id="Municipios">
+				<option value="Acajete*"> </option> 
+				<option value="Acateno*"> </option> 
+				<option value="Acatlan*"> </option> 
+				<option value="Acatzingo*"> </option> 
+				<option value="Acteopan*"> </option> 
+				<option value="Ahuacatlan*"> </option> 
+				<option value="Ahuatlan*"> </option> 
+				<option value="Ahuazotepec*"> </option> 
+				<option value="Ahuehuetitla*"> </option> 
+				<option value="Ajalpan*"> </option> 
+				<option value="Otros*"> </option> 
+				<option value="Albino Zertuche*"> </option> 
+				<option value="Aljojuca*"> </option> 
+				<option value="Altepexi*"> </option> 
+				<option value="Amixtlan*"> </option> 
+				<option value="Amozoc*"> </option> 
+				<option value="Aquixtla*"> </option> 
+				<option value="Atempan*"> </option> 
+				<option value="Atexcal*"> </option> 
+				<option value="Atlixco*"> </option> 
+				<option value="Atoyatempan*"> </option> 
+				<option value="Atzala*"> </option> 
+				<option value="Atzitzihuacan*"> </option> 
+				<option value="Atzizintla*"> </option> 
+				<option value="Axutla*"> </option> 
+				<option value="Ayotoxco de Guerrero*"> </option> 
+				<option value="Calpan*"> </option> 
+				<option value="Caltepec*"> </option> 
+				<option value="Camocuautla*"> </option> 
+				<option value="Cañada Morelos*"> </option> 
+				<option value="Caxhuacan*"> </option> 
+				<option value="Coatepec*"> </option> 
+				<option value="Coatzingo*"> </option> 
+				<option value="Cohetzala*"> </option> 
+				<option value="Cohuecan*"> </option> 
+				<option value="Coronango*"> </option> 
+				<option value="Coxcatlan*"> </option> 
+				<option value="Coyomeapan*"> </option> 
+				<option value="Coyotepec*"> </option> 
+				<option value="Cuapiaxtla de Madero*"> </option> 
+				<option value="Cuautempan*"> </option> 
+				<option value="Cuatinchan*"> </option> 
+				<option value="Cuautlancingo*"> </option> 
+				<option value="Cuayuca de Andrade*"> </option> 
+				<option value="Cuetzalan del Progreso*"> </option> 
+				<option value="Cuyoaco*"> </option> 
+				<option value="Chalchicomula de Sesma*"> </option> 
+				<option value="Chapulco*"> </option> 
+				<option value="Chiautla de Tapia*"> </option> 
+				<option value="Chiautzingo*"> </option> 
+				<option value="Chiconcuautla*"> </option> 
+				<option value="Chichiquila*"> </option> 
+				<option value="Chietla*"> </option> 
+				<option value="Chigmecatitlan*"> </option> 
+				<option value="Chignahuapan*"> </option> 
+				<option value="Chignautla*"> </option> 
+				<option value="Chila*"> </option> 
+				<option value="Chila de la Sal*"> </option> 
+				<option value="Chila Honey*"> </option> 
+				<option value="Chilchotla*"> </option> 
+				<option value="Chinantla*"> </option> 
+				<option value="Domingo Arenas*"> </option> 
+				<option value="Eloxotitlan*"> </option> 
+				<option value="Epatlan*"> </option> 
+				<option value="Esperanza*"> </option> 
+				<option value="Francisco Z. Mena*"> </option> 
+				<option value="Gral. Felipe Angeles*"> </option> 
+				<option value="Guadalupe*"> </option> 
+				<option value="Guadalupe Victoria*"> </option> 
+				<option value="Hermenegildo Galeana*"> </option> 
+				<option value="Huaquechula*"> </option> 
+				<option value="Huatlatlauca*"> </option> 
+				<option value="Huauchinango*"> </option> 
+				<option value="Huehuetla*"> </option> 
+				<option value="Huehuetlan el Chico*"> </option> 
+				<option value="Huehuetlan el Grande*"> </option> 
+				<option value="Huejotzingo*"> </option> 
+				<option value="Hueyapan*"> </option> 
+				<option value="Hueytamalco*"> </option> 
+				<option value="Hueytlalpan*"> </option> 
+				<option value="Huitzilan de Serdan*"> </option> 
+				<option value="Huitziltepec*"> </option> 
+				<option value="Atlequizayan(Ignacio Allende)*"> </option> 
+				<option value="Ixcamilpa de Guerrero*"> </option> 
+				<option value="Ixcaquixtla*"> </option> 
+				<option value="Ixtacamaxtitlan*"> </option> 
+				<option value="Ixtepec*"> </option> 
+				<option value="Izucar de Matamoros*"> </option> 
+				<option value="Jalpan*"> </option> 
+				<option value="Jolalpan*"> </option> 
+				<option value="Jonotla*"> </option> 
+				<option value="Jopala*"> </option> 
+				<option value="Juan C. Bonilla*"> </option> 
+				<option value="Juan Galindo*"> </option> 
+				<option value="Juan N. Mendez*"> </option> 
+				<option value="Mixtla*"> </option> 
+				<option value="Molcaxac*"> </option> 
+				<option value="Naupan*"> </option> 
+				<option value="Nauzontla*"> </option> 
+				<option value="Nealtican*"> </option> 
+				<option value="Nicolas Bravo*"> </option> 
+				<option value="Nopalucan*"> </option> 
+				<option value="Ocotepec*"> </option> 
+				<option value="Ocoyucan*"> </option> 
+				<option value="Olintla*"> </option> 
+				<option value="Oriental*"> </option> 
+				<option value="Pahuatlan*"> </option> 
+				<option value="Palmar de Bravo*"> </option> 
+				<option value="Pantepec*"> </option> 
+				<option value="Petlalcingo*"> </option> 
+				<option value="Piaxtla*"> </option> 
+				<option value="Puebla*"> </option> 
+				<option value="Quecholac*"> </option> 
+				<option value="Quimixtlan*"> </option> 
+				<option value="Rafael Lara Grajales*"> </option> 
+				<option value="Reyes de Juarez Los*"> </option> 
+				<option value="San Andres Cholula*"> </option> 
+				<option value="San Antonio Canada*"> </option> 
+				<option value="S.Diego la Mesa Tochimitzingo*"> </option> 
+				<option value="San Felipe Teotlalcingo*"> </option> 
+				<option value="San Felipe Tepatlan*"> </option> 
+				<option value="San Gabriel Chilac*"> </option> 
+				<option value="San Gregorio Atzompa*"> </option> 
+				<option value="San Jeronimo Tecuanipan*"> </option> 
+				<option value="San Jeronimo Xayacatlan*"> </option> 
+				<option value="San Jose Chiapa*"> </option> 
+				<option value="San Jose Miahuatlan*"> </option> 
+				<option value="San Juan Atenco*"> </option> 
+				<option value="San Juan Atzompa*"> </option> 
+				<option value="San Martin Texmelucan*"> </option> 
+				<option value="San Martin Totoltepec*"> </option> 
+				<option value="San Matias Tlalancaleca*"> </option> 
+				<option value="San Miguel Ixitlan*"> </option> 
+				<option value="San Miguel Xoxtla*"> </option> 
+				<option value="San Nicolas Buenos Aires*"> </option> 
+				<option value="San Nicolas de los Ranchos*"> </option> 
+				<option value="San Pablo Anicano*"> </option> 
+				<option value="San Pedro Cholula*"> </option> 
+				<option value="San Pedro Yeloixtlahuacan*"> </option> 
+				<option value="San Salvador el Seco*"> </option> 
+				<option value="San Salvador el Verde*"> </option> 
+				<option value="San Salvador Huixcolotla*"> </option> 
+				<option value="Santa Catarina Tlaltempan*"> </option> 
+				<option value="Santa Ines Ahuatempan*"> </option> 
+				<option value="Santa Isabel Cholula*"> </option> 
+				<option value="Santiago Miahuatlan*"> </option> 
+				<option value="Santo Tomas Hueyotlipan*"> </option> 
+				<option value="Soltepec*"> </option> 
+				<option value="Tecali de Herrera*"> </option> 
+				<option value="Tecamachalco*"> </option> 
+				<option value="Tecomatlan*"> </option> 
+				<option value="Tehuacan*"> </option> 
+				<option value="Tehuitzingo*"> </option> 
+				<option value="Tenampulco*"> </option> 
+				<option value="Teopantlan*"> </option> 
+				<option value="Teotlalco*"> </option> 
+				<option value="Tepanco de Lopez*"> </option> 
+				<option value="Tepango de Rodriguez*"> </option> 
+				<option value="Tepatlaxco de Hidalgo*"> </option> 
+				<option value="Tepeaca*"> </option> 
+				<option value="Tepemaxalco*"> </option> 
+				<option value="Tepeojuma*"> </option> 
+				<option value="Tepetzintla*"> </option> 
+				<option value="Tepexi de Rodriguez*"> </option> 
+				<option value="Tepeyahualco*"> </option> 
+				<option value="Tepeyahualco de Cuahutemoc*"> </option> 
+				<option value="Tetela de Ocampo*"> </option> 
+				<option value="Teteles de Avila Castillo*"> </option> 
+				<option value="Teziutlan*"> </option> 
+				<option value="Tianguismanalco*"> </option> 
+				<option value="Tilapa*"> </option> 
+				<option value="Tlacotepec de B. Juarez*"> </option> 
+				<option value="San Sebastian de Tlacotepec *"> </option> 
+				<option value="Tlacuilotepec*"> </option> 
+				<option value="Tlachichuca*"> </option> 
+				<option value="Tlahuapan*"> </option> 
+				<option value="Tlaltenango*"> </option> 
+				<option value="Tlanepantla*"> </option> 
+				<option value="Tlaola*"> </option> 
+				<option value="Tlapacoyan*"> </option> 
+				<option value="Tlapanala*"> </option> 
+				<option value="Tlatlauquitepec*"> </option> 
+				<option value="Tlaxco*"> </option> 
+				<option value="Tochimilco*"> </option> 
+				<option value="Tochtepec*"> </option> 
+				<option value="Totoltepec de Guerrero*"> </option> 
+				<option value="Tulcingo*"> </option> 
+				<option value="Tuzamapan de Galeana*"> </option> 
+				<option value="Tzicatlacoyan*"> </option> 
+				<option value="Venustiano Carranza*"> </option> 
+				<option value="Vicente Guerrero*"> </option> 
+				<option value="Xayacatlan de Bravo*"> </option> 
+				<option value="Xicotepec de Juárez*"> </option> 
+				<option value="Xicotlan*"> </option> 
+				<option value="Xiutetelco*"> </option> 
+				<option value="Xochiapulco*"> </option> 
+				<option value="Xochiltepec*"> </option> 
+				<option value="Xochitlan de Vicente Suarez*"> </option> 
+				<option value="Xochitlan de Todos Santos*"> </option> 
+				<option value="Yaonahuac*"> </option> 
+				<option value="Yehualtepec*"> </option> 
+				<option value="Zacapala*"> </option> 
+				<option value="Zacapoaxtla*"> </option> 
+				<option value="Zacatlan*"> </option> 
+				<option value="Zapotitlan*"> </option> 
+				<option value="Zapotitlan de Mendez*"> </option> 
+				<option value="Zaragoza*"> </option> 
+				<option value="Zautla*"> </option> 
+				<option value="Zihuateutla*"> </option> 
+				<option value="Zinacatepec*"> </option> 
+				<option value="Zongozotla*"> </option> 
+				<option value="Zoquiapan*"> </option> 
+				<option value="Zoquitlan*"> </option> 
+				<option value="Tepexco*"> </option> 
+				<option value="La Fragua*"> </option> 
+				<option value="Libres*"> </option> 
+				<option value="Magdalena de Tlatauquitepec*"> </option> 
+				<option value="Mazapiltepec de Juarez*"> </option> 
+				<option value="San Francisco Totimehuacan*"> </option> 
+				</datalist>
+		</strong>
+	</td>
+	<td style="width: 324px"><strong><input id="pr_city" name='data2.PR_SPRADDR_CITY' style="width: 205px"></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong>Estado</strong></td>
+	<td colspan="2"><strong>País</strong></td>
+	<td style="width: 324px"></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong>
+		<input list="estados" id="pr_state" name='data2.PR_SPRADDR_STAT'>
+		
+	</strong></td>
+	<td colspan="2"><strong><input id="pr_country" name='data2.PR_SPRADDR_NATN_CODE' style="width: 194px"></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td style="height: 23px; width: 125px"><strong>Lada&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</strong> </td>
+	<td style="height: 23px; width: 205px"><strong>Tel.</strong></td>
+	<td style="height: 23px" colspan="2"><strong>Ext.</strong></td>
+	<td style="height: 23px; width: 324px;"></td>
+</tr>
+
+
+<tr>
+	<td style="height: 26px; width: 125px">
+	<strong>
+	<input id="pr_lada" name='data2.PR_SPRADDR_PHONE_AREA' style="width: 101px"></strong></td>
+	<td style="height: 26px; width: 205px">
+	<strong>
+	<input id="pr_tel" name='data2.PR_SPRADDR_PHONE_NUMBER' style="width: 134px" class="style2"></strong></td>
+	<td style="height: 26px; width: 157px;">
+	<strong>
+	<input id="pr_ext" name='data2.PR_SPRADDR_PHONE_EXT' style="width: 100px"></strong></td>
+	<td style="height: 26px; width: 157px;"><strong></strong></td>
+	<td style="height: 26px; width: 324px;"><strong></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2" class="style4"><hr></td>
+	<td colspan="2"><hr></td>
+	<td style="width: 324px"><hr></td>
+</tr>
+
+<tr>
+	<td colspan="2" class="style5"><strong>Lugar de Nacimiento</strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td style="height: 26px" colspan="2"><strong>Calle</strong></td>
+	<td style="height: 26px" colspan="2"><strong>Número </strong> </td>
+	<td style="height: 26px; width: 324px;"><strong>Colonia</strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong><input id="ln_calle1" name='data2.LN_SPRADDR_STREET_LINE1' style="width: 323px" ></strong></td>
+	<td colspan="2"><strong><input id="ln_calle2" name='data2.LN_SPRADDR_STREET_LINE2' style="width: 125px"></strong></td>
+	<td style="width: 324px"><strong><input id="ln_calle3" name='data2.LN_SPRADDR_STREET_LINE3' style="width: 207px"></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong>Código Postal</strong></td>
+	<td colspan="2"><strong>Municipio</strong></td>
+	<td style="width: 324px"><strong>Ciudad</strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong><input id="ln_cp" name='data2.LN_SPRADDR_ZIP'></strong></td>
+	<td colspan="2"><strong>
+		<input list="Municipios" id="ln_county" name='data2.LN_STVCNTY_DESC' >
+		
+	</strong></td>
+	<td style="width: 324px"><strong><input id="ln_city" name='data2.LN_SPRADDR_CITY' style="width: 205px"></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong>Estado</strong></td>
+	<td colspan="2"><strong>País</strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong>
+		<input list="estados" id="ln_state" name='data2.LN_SPRADDR_STAT'>
+		<datalist id="estados">
+			<option value="Aguascalientes*"> </option> 
+			<option value="Baja California Sur*"> </option> 
+			<option value="Baja California*"> </option> 
+			<option value="Campeche*"> </option> 
+			<option value="Chiapas*"> </option> 
+			<option value="Chihuahua*"> </option> 
+			<option value="Coahuila*"> </option> 
+			<option value="Colima*"> </option> 
+			<option value="Distrito Federal*"> </option> 
+			<option value="Durango*"> </option> 
+			<option value="Guanajuato*"> </option> 
+			<option value="Guerrero*"> </option> 
+			<option value="Hidalgo*"> </option> 
+			<option value="Jalisco*"> </option> 
+			<option value="Mexico*"> </option> 
+			<option value="Michoacan*"> </option> 
+			<option value="Morelos*"> </option> 
+			<option value="Nayarit*"> </option> 
+			<option value="Nuevo Leon*"> </option> 
+			<option value="Oaxaca*"> </option> 
+			<option value="Puebla*"> </option> 
+			<option value="Queretaro*"> </option> 
+			<option value="Quintana Roo*"> </option> 
+			<option value="San Luis Potosi*"> </option> 
+			<option value="Sinaloa*"> </option> 
+			<option value="Sonora*"> </option> 
+			<option value="Tabasco*"> </option> 
+			<option value="Tamaulipas*"> </option> 
+			<option value="Tlaxcala*"> </option> 
+			<option value="Veracruz*"> </option> 
+			<option value="Yucatan*"> </option> 
+			<option value="Zacatecas*"> </option> 
+			<option value="Extranjero (otros)*"> </option> 
+			</datalist>
+	</strong></td>
+	<td colspan="2"><strong><input id="ln_country" name='data2.LN_SPRADDR_NATN'></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td style="width: 125px"><strong>Lada</strong></td>
+	<td style="width: 205px"><strong>Tel </strong> </td>
+	<td colspan="2"><strong>Ext.</strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+
+<tr>
+	<td style="height: 25px; width: 125px">
+	<strong>
+	<input id="ln_lada"  name='data2.LN_SPRADDR_PHONE_AREA' style="width: 98px"></strong></td>
+	<td style="height: 25px; width: 205px"><strong><input id="ln_tel" name='data2.LN_SPRADDR_PHONE_NUMBER'></strong></td>
+	<td colspan="2" style="height: 25px"><strong><input id="ln_ext" name='data2.LN_SPRADDR_PHONE_EXT'></strong></td>
+	<td style="height: 25px; width: 324px;"></td>
+</tr>
+
+
+<tr>
+	<td colspan="2" class="style4"><hr></td>
+	<td colspan="2"><hr></td>
+	<td style="width: 324px"><hr></td>
+</tr>
+
+
+<tr>
+	<td colspan="2" class="style5"><strong>Datos Generales</strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+
+<tr>
+	<td colspan="2"><strong>Genero</strong></td>
+	<td colspan="2"><strong>Nacionalidad</strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+
+<tr>
+	<td colspan="2">
+	<strong>
+		<input type = "radio" name = "data2.SPBPERS_SEX" id = "F" value = "F" checked = "checked" />
+          <label for = "front">MUJER</label>
+        <input type = "radio" name = "data2.SPBPERS_SEX" id = "M" value = "M" />
+          <label for = "back">HOMBRE</label>
+	</strong>
+	</td>
+	<td colspan="2"><strong><input id="nationality"  name='data2.SPBPERS_ITIN' ></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong>Fecha de nacimiento</strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td colspan="3"><strong><input id="birthDate" name="birthDate" style="width: 152px"><label>Formato fecha:YYYY-MM-DD</label></strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2" style="height: 23px"><hr></td>
+	<td colspan="2" style="height: 23px"><hr></td>
+	<td style="height: 23px; width: 324px;"><hr></td>
+</tr>
+
+<tr>
+	<td colspan="2" style="height: 23px" class="style5"><strong>Opción de Ingreso</strong></td>
+	<td colspan="2" style="height: 23px"></td>
+	<td style="height: 23px; width: 324px;"></td>
+</tr>
+
+<tr ng-app>
+
+	<div ng-controller="Controller" ng-bind="check()">
+	<td colspan="2"><strong>
+		<select name="data2.SARADAP_PROGRAM_1">
+						<option value="UBI">Bachillerato 5 de Mayo</option> 
+						<option value="RIA">Ing en Tecno de Inf (Acatzing)</option> 
+						<option value="IAF">Ing. Agroforestal Tetela</option> 
+						<option value="IAH">Ing. Agrohidráulica</option> 
+						<option value="RAI">Ing. Agroindustrial Acatzingo</option> 
+						<option value="IAZ">Ing. Agronómica y  Zootecnia</option> 
+						<option value="IAM">Ing. Ambiental</option> 
+						<option value="ICV">Ing. Civil</option> 
+						<option value="IAL">Ing. en Alimentos</option> 
+						<option value="ICC">Ing. en Cs. de la Computación</option> 
+						<option value="IER">Ing. en Energías Renovables</option> 
+						<option value="LIA">Ing. en Materiales</option> 
+						<option value="ISA">Ing. en Sistemas Automotrices</option> 
+						<option value="ITI">Ing. en Tecnologias de la Inf.</option> 
+						<option value="IGF">Ing. Geofísica</option> 
+						<option value="IID">Ing. Industrial</option> 
+						<option value="IME">Ing. Mecánica y Eléctrica</option> 
+						<option value="IQU">Ing. Química</option> 
+						<option value="ITX">Ing. Textil</option> 
+						<option value="ITG">Ing. Topográfica y Geodésica</option> 
+						<option value="ANT">Lic en Antropologia</option> 
+						<option value="LCP">Lic en Contaduria Publica</option> 
+						<option value="DLCP">Lic en Contaduria Publica Dist</option> 
+						<option value="PSI">Lic en Psicología</option> 
+						<option value="LRI">Lic Relaciones Internacionales</option> 
+						<option value="RHE">Lic. Admón. Empresas Chiautla</option> 
+						<option value="SLCM">Lic. en  Comunicación  Semi</option> 
+						<option value="ACT">Lic. en Actuaría</option> 
+						<option value="DLAE">Lic. en Admon de Empresas Dist</option> 
+						<option value="RAH">Lic. en Admon de Empresas Huau</option> 
+						<option value="LAE">Lic. en Admon. de Empresas</option> 
+						<option value="RAT">Lic. en Admon. Turistica Chig</option> 
+						<option value="RCA">Lic. en Admón. Turística Cuetz</option> 
+						<option value="SLAE">Lic. en Admon.de Empresas Semi</option> 
+						<option value="ARQ">Lic. en Arquitectura</option> 
+						<option value="RTQ">Lic. en Arquitectura Tehua</option> 
+						<option value="ADI">Lic. en Arte Digital</option> 
+						<option value="LAD">Lic. en Arte Dramatico</option> 
+						<option value="APL">Lic. en Artes Plásticas</option> 
+						<option value="BIO">Lic. en Biología</option> 
+						<option value="LBM">Lic. en Biomedicina</option> 
+						<option value="LBT">Lic. en Biotecnología</option> 
+						<option value="LPO">Lic. en Ciencias Políticas</option> 
+						<option value="CIN">Lic. en Cinematografía</option> 
+						<option value="LCI">Lic. en Comercio Internacional</option> 
+						<option value="LCM">Lic. en Comunicación</option> 
+						<option value="DLCM">Lic. en Comunicacion - Distanc</option> 
+						<option value="RXM">Lic. en Comunicacion Atlixco</option> 
+						<option value="LCJ">Lic. en Consultoría Jurídica</option> 
+						<option value="SLCP">Lic. en Contaduria Públi Semi</option> 
+						<option value="RLC">Lic. en Contaduría Pública Lib</option> 
+						<option value="RZC">Lic. en Contaduria Publica Zacapoaxtla</option> 
+						<option value="REP">Lic. en Contaduría Tetela</option> 
+						<option value="LCR">Lic. en Criminología</option> 
+						<option value="CCO">Lic. en Cs. de la Computación</option> 
+						<option value="RTP">Lic. en Cs. Políticas Tehuacán</option> 
+						<option value="LEF">Lic. en Cultura Física</option> 
+						<option value="LDA">Lic. en Danza</option> 
+						<option value="LDE">Lic. en Derecho</option> 
+						<option value="DLDE">Lic. en Derecho - Distancia</option> 
+						<option value="SLDE">Lic. en Derecho - Semi</option> 
+						<option value="RCD">Lic. en Derecho Chignahuapan</option> 
+						<option value="RTD">Lic. en Derecho Tehuacán</option> 
+						<option value="DSG">Lic. en Diseño Grafico</option> 
+						<option value="RTG">Lic. en Diseño Gráfico Tehua</option> 
+						<option value="LEC">Lic. en Economía</option> 
+						<option value="LCE">Lic. en Electrónica</option> 
+						<option value="ENF">Lic. en Enfermería</option> 
+						<option value="REE">Lic. en Enfermería Tetela</option> 
+						<option value="ETM">Lic. en Estomatología</option> 
+						<option value="RET">Lic. en Estomatologia Tehuacan</option> 
+						<option value="LET">Lic. en Etnocoreología</option> 
+						<option value="FAR">Lic. en Farmacia</option> 
+						<option value="FIL">Lic. en Filosofía</option> 
+						<option value="LFI">Lic. en Finanzas</option> 
+						<option value="FIS">Lic. en Física</option> 
+						<option value="LFA">Lic. en Física Aplicada</option> 
+						<option value="LFT">Lic. en Fisioterapia</option> 
+						<option value="RCF">Lic. en Fisioterapia Cuetzalan</option> 
+						<option value="LGA">Lic. en Gastronomía</option> 
+						<option value="HIS">Lic. en Historia</option> 
+						<option value="LIM">Lic. en Ing. en Mecatrónica</option> 
+						<option value="MAT">Lic. en Matemáticas</option> 
+						<option value="LMA">Lic. en Matemáticas Aplicadas</option> 
+						<option value="MVZ">Lic. en Med. Vet. y Zootecnia</option> 
+						<option value="MED">Lic. en Medicina</option> 
+						<option value="LMU">Lic. en Musica</option> 
+						<option value="LNC">Lic. en Nutrición Clínica</option> 
+						<option value="LED">Lic. en Procesos Educativos</option> 
+						<option value="RPZ">Lic. en Psicología Zacapoaxtla</option> 
+						<option value="QUI">Lic. en Química</option> 
+						<option value="QFB">Lic. en Quimico Farmacobiologo</option> 
+						<option value="LSO">Lic. en Sociologia</option> 
+						<option value="EFR">Lic. Enseñanza del Francés</option> 
+						<option value="EIN">Lic. Enseñanza del Inglés</option> 
+						<option value="RME">Lic. Medicina Tehuacán</option> 
+						<option value="RLA">Lic.en Admon. de Empresas Libr</option> 
+						<option value="RXE">Lic.en Admón. Empresas Atlixco</option> 
+						<option value="LAT">Lic.en Admon. Turistica</option> 
+						<option value="RAA">Lic.en Admon.de Empresas Acatz</option> 
+						<option value="RAE">Lic.en Admón.de Empresas Chig</option> 
+						<option value="RTA">Lic.en Admon.de Empresas Tehu</option> 
+						<option value="ACP">Lic.en Admon.Publica y Cs.Pol</option> 
+						<option value="RXC">Lic.en Contaduría Pub. Atlixco</option> 
+						<option value="RDH">Lic.en Derecho (Huauchinango)</option> 
+						<option value="LLH">Lic.Linguistica y Lit. Hispani</option> 
+						<option value="LUR">Licenciatura en Urbanismo</option> 
+						<option value="RSB">Prep. "Simon Bolivar"(Atlixco)</option> 
+						<option value="UDO">Prep. 2 de Octubre de 1968</option> 
+						<option value="UAC">Prep. Alfonso Calderón Moreno</option> 
+						<option value="RCS">Prep. Ciudad Serdán</option> 
+						<option value="RCU">Prep. Cuetzalan</option> 
+						<option value="UEZ">Prep. Emiliano Zapata</option> 
+						<option value="REC">Prep. Enrique Cabrera (Teca)</option> 
+						<option value="ULC">Prep. Gral. Lázaro Cárdenas</option> 
+						<option value="RIM">Prep. Izucar de Matamoros</option> 
+						<option value="UBJ">Prep. Lic.Benito Juarez Garcia</option> 
+						<option value="RPL">Prep. Regional Libres</option> 
+						<option value="RMT">Prep. Sn Martin Texmelucan</option> 
+						<option value="UEC">Prep. Urb. Enrique Cabrera B.</option> 
+						<option value="RPA">Preparatoria Acajete</option> 
+						<option value="RPC">Preparatoria Chiautla de Tapia</option> 
+						<option value="RPT">Preparatoria Tepeaca</option> 
+						<option value="RTZ">Preparatoria Teziutlán</option> 
+						<option value="RPN">Preparatoria Zacatlán</option> 
+						<option value="PAI">Prof Asoc en Imagenología</option> 
+						<option value="TMU">Tec. en Música</option>
+						</select>
+	</strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+	</div>
+</tr>
+
+<tr>
+	<td colspan="2">&nbsp;</td>
+	<td colspan="2">&nbsp;</td>
+	<td style="width: 324px">&nbsp;</td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong>Escuela de Procedencia</strong></td>
+	<td colspan="2"><strong>Fecha acreditación</strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong><input id="esc_procedencia_1" name='data2.SORHSCH_SBGI_DESC' style="width: 317px"></strong></td>
+	<td colspan="3"><strong><input id="acred_date" name='data2.SORHSCH_GRADUATION_DATE' style="width: 203px"><label>Formato fecha: YYYY-MM-DD</label></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td colspan="2">&nbsp;</td>
+	<td colspan="2">&nbsp;</td>
+	<td style="width: 324px">&nbsp;</td>
+</tr>
+
+<tr>
+	<td colspan="2"><strong></strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td style="width: 125px"><strong>Promedio</strong></td>
+	<td style="width: 205px"><strong><input id="score" ng-pattern="/^id_[0-9]+$/" name='data2.SORHSCH_GPA' style="width: 191px"></strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td style="width: 125px"><strong>Edificio</strong></td>
+	<td style="width: 205px"><strong><input id="score" name='data2.edificio' style="width: 191px"></strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+<tr>
+	<td style="width: 125px"><strong>Salon</strong></td>
+	<td style="width: 205px"><strong><input id="score" name='data2.salon' style="width: 191px"></strong></td>
+	<td colspan="2"><strong></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+
+
+
+<tr>
+	<td colspan="2" style="height: 26px">&nbsp;</td>
+	<td colspan="2" style="height: 26px">&nbsp;</td>
+	<td style="height: 26px; width: 324px;">&nbsp;</td>
+</tr>
+
+<tr>
+	<td colspan="2" style="height: 26px" class="style3">&nbsp;</td>
+	<td colspan="2" style="height: 26px" class="style3"><strong>GENERAR PÓLIZA</strong></td>
+	<td style="height: 26px; width: 324px;"></td>
+</tr>
+
+<tr>
+	<td colspan="2" class="style3">&nbsp;</td>
+	<td colspan="2" class="style3"><strong><input type="submit"></strong></td>
+	<td style="width: 324px"><strong></strong></td>
+</tr>
+<input type="hidden" name="area" />
+</form>
+</body>
+</html>
