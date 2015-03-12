@@ -1,0 +1,158 @@
+<HTML ng-app>
+<HEAD>
+
+<meta charset="utf-8">
+<script src="js/angular.min.js"></script>
+<script>
+function getReport($scope, $http){
+	$http.get('http://127.0.0.1:55556/?action=getReport').success(function(data, status, headers, config) {
+		//console.log(data);
+		var resultSet = [];
+		var dataReport = [];
+		data.forEach(function (e) {
+    		 for (var i in e){
+    			if (i === 'SPBPERS_BIRTH_DATE' || i ==='SORHSCH_GRADUATION_DATE' )
+    		 		dataReport[i] = e[i].substr(0,10);
+    		 	else
+    		 		dataReport[i] = e[i];
+    		 }
+    		 resultSet.push(dataReport);
+  		});
+		console.log(resultSet);
+		$scope.reports = resultSet;
+	});
+}
+</script>
+<style>
+@media print {
+  b { font-weight: normal }
+}
+</style>
+</HEAD>
+
+<TITLE>SWFWRASP</TITLE>
+
+<BODY>
+	<H1>REPORTE</H1>
+	<table ng-controller='getReport' border=2>
+		<tr ng-repeat="report in reports">
+				<td>{{$index+1}}</td>
+				<td>{{report.SPRIDEN_ID}}</td>
+				<td>{{report.SPRIDEN_LAST_NAME}}</td>
+		
+				<td>{{report.SPRIDEN_FIRST_NAME}}</td>
+			
+		
+				<td>{{report.SPRIDEN_MI}}</td>
+
+
+				<td>{{report.PR_SPRADDR_STREET_LINE1}}</td>
+			
+				<td>{{report.PR_SPRADDR_STREET_LINE2}}</td>
+	
+		
+				<td>{{report.PR_SPRADDR_STREET_LINE3}}</td>
+			
+		
+				<td>{{report.PR_SPRADDR_ZIP}}</td>
+			
+				<td>{{report.PR_STVCNTY_DESC}}</td>
+			
+			
+				<td>{{report.PR_STVCNTY_DESC}}</td>
+			
+			
+				<td>{{report.PR_STVSTAT_DESC}}</td>
+			
+			
+				<td>{{report.PR_SPRADDR_CITY}}</td>
+			
+			
+				<td>{{report.PR_SPRADDR_NATN_CODE}}</td>
+			
+			
+				<td>{{report.PR_SPRADDR_PHONE_AREA}}</td>
+			
+			
+				<td>{{report.PR_SPRADDR_PHONE_NUMBER}}</td>
+			
+			
+				<td>{{report.PR_SPRADDR_PHONE_EXT}}</td>
+			
+			
+				<td>{{report.LN_SPRADDR_STREET_LINE1}}</td>
+			
+			
+				<td>{{report.LN_SPRADDR_STREET_LINE2}}</td>
+			
+			
+				<td>{{report.LN_SPRADDR_STREET_LINE3}}</td>
+			
+			
+				<td>{{report.LN_SPRADDR_ZIP}}</td>
+			
+			
+				<td>{{report.LN_STVCNTY_DESC}}</td>
+			
+			
+				<td>{{report.LN_STVCNTY_DESC}}</td>
+			
+			
+				<td>{{report.LN_STVSTAT_DESC}}</td>
+			
+			
+				<td>{{report.LN_SPRADDR_CITY}}</td>
+			
+			
+				<td>{{report.LN_SPRADDR_NATN_CODE}}</td>
+			
+			
+				<td>{{report.LN_SPRADDR_PHONE_AREA}}</td>
+			
+			
+				<td>{{report.LN_SPRADDR_PHONE_NUMBER}}</td>
+			
+			
+				<td>{{report.LN_SPRADDR_PHONE_EXT}}</td>
+			
+
+			
+				<td>{{report.SPBPERS_SEX}}</td>
+			
+			
+				<td>{{report.SPBPERS_ITIN}}</td>
+			
+			
+				<td>{{report.SPBPERS_BIRTH_DATE}}</td>
+			
+			
+				<td>{{report.SARADAP_PROGRAM_1}}</td>
+			
+			
+				<td>{{report.stvmajr_desc}}</td>
+			
+			
+				<td>{{report.area_desc}}</td>
+			
+			
+				<td>{{report.SORHSCH_SBGI_DESC}}</td>
+			
+			
+				<td>{{report.SORHSCH_GRADUATION_DATE}}</td>
+						
+			
+				<td>{{report.SORHSCH_GPA}}</td>
+			
+			
+				<td>{{report.folio}}</td>
+			
+			
+				<td>{{report.edificio}}</td>
+			
+			
+				<td>{{report.salon}}</td>
+		</tr>	
+	</table>
+
+</BODY>
+</HTML>
