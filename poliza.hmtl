@@ -1,0 +1,83 @@
+<HTML ng-app>
+<HEAD>
+
+<meta charset="utf-8">
+<script src="js/angular.min.js"></script>
+<script src="js/controller.js"></script>
+<style>
+@media print {
+  b { font-weight: normal }
+}
+</style>
+</HEAD>
+
+<TITLE>SWFWRASP</TITLE>
+
+<BODY>
+
+<div ng-controller='getData'>
+
+  
+<div id="spriden_id" style="font-family:Arial;font-size: 9pt;text-align:center;" >{{sede + data2.SPRIDEN_ID}}</div>
+  
+<table>
+<tr>
+<TD COLSPAN="2"  width="298" style="border-left-style: solid; border-left-width: 1px; border-right-style: solid; border-right-width: 1px; border-top-style: solid; border-top-width: 1px" height="13"><FONT style="font-size: 7pt">Nombre</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2"  width="298" style="border-left-style: solid; border-left-width: 1px; border-right-style: solid; border-right-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><P ALIGN="center"><B>
+<FONT face="Arial" style="font-size:7pt">{{data2.SPRIDEN_FIRST_NAME + ' ' +data2.SPRIDEN_MI}}</FONT>
+</B></TD>
+</TR>
+<TR>
+<TD COLSPAN="2"  width="298" style="border-left-style: solid; border-left-width: 1px; border-right-style: solid; border-right-width: 1px; border-top-style: solid; border-top-width: 1px" height="13"><FONT style="font-size: 7pt">Apellidos</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2"  width="298" style="border-left-style: solid; border-left-width: 1px; border-right-style: solid; border-right-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><P ALIGN="center"><B>
+
+
+  <FONT face="Arial" style="font-size: 7pt">{{data2.SPRIDEN_LAST_NAME}}</FONT>
+
+
+
+</B></TD>
+
+</TR>
+<TR>
+<TD COLSPAN="2"  width="298" style="border-left-style: solid; border-left-width: 1px; border-right-style: solid; border-right-width: 1px; border-top-style: solid; border-top-width: 1px"><FONT style="font-size: 7pt">Nacionalidad</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2"  width="298" style="border-left-style: solid; border-left-width: 1px; border-right-style: solid; border-right-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><P ALIGN="center"><B>
+
+
+  <FONT face="Arial" style="font-size: 7pt">{{data2.SPBPERS_ITIN}}</FONT>
+
+
+
+</B></TD>
+</TR>
+<TR>
+<TD  style="border-left-style: solid; border-left-width: 1px; border-top-style: solid; border-top-width: 1px"><P ALIGN="center"><FONT style="font-size: 7pt">Lug. Nac.</FONT></TD>
+<TD  style="border-right-style: solid; border-right-width: 1px; border-top-style: solid; border-top-width: 1px"><P ALIGN="center"><FONT style="font-size: 7pt">Fech. Nac.</FONT></TD>
+</TR>
+<TR>
+<TD  width="152" style="border-left-style: solid; border-left-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><P ALIGN="center"><B>
+  <FONT face="Arial" style="font-size: 7pt">{{data2.LN_SPRADDR_CITY + ' ' + data2.LN_SPRADDR_STAT_CODE + ' ' + data2.LN_SPRADDR_NATN_CODE}}</FONT>
+</B></TD>
+
+<TD  width="146" style="border-right-style: solid; border-right-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><P ALIGN="center"><B>
+
+
+
+  <FONT face="Arial" style="font-size: 7pt">{{data2.SPBPERS_BIRTH_DATE}}</FONT>
+
+
+
+</B></TD>
+</TR>
+
+</TABLE>
+</div>
+</BODY>
+
+</HTML>
